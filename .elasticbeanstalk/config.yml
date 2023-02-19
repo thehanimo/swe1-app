@@ -1,0 +1,21 @@
+branch-defaults:
+  default:
+    environment: mysite-prod
+  main:
+    environment: mysite-prod
+environment-defaults:
+  mysite-dev:
+    branch: null
+    repository: null
+global:
+  application_name: mysite
+  default_ec2_keyname: null
+  default_platform: Python 3.7 running on 64bit Amazon Linux 2
+  default_region: us-east-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: null
+  workspace_type: Application
