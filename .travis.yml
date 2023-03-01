@@ -1,0 +1,34 @@
+language: python
+python:
+  - "3.7"
+env:
+  - DJANGO=3.2
+
+install:
+  - pip install Django==3.2.18
+  - pip install asgiref==3.6.0
+  - pip install python-dotenv==0.21.1
+  - pip install pytz==2022.7.1
+  - pip install sqlparse==0.4.3
+  - pip install importlib-metadata
+  - pip install black
+  - pip install flake8
+  - pip install coveralls
+
+script:
+  - flake8 .
+  - black .
+  - coverage run manage.py test
+
+after_success: coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWSACCESSID
+  secret_access_key: $AWSACCESSKEY
+  region: "us-east-2"
+  app: "mysite"
+  env: "mysite-env"
+  bucket_name: "elasticbeanstalk-us-east-2-964276122574"
+  on:
+    branch: main

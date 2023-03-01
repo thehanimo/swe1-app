@@ -9,3 +9,5 @@
 *.pyc
 __pycache__
 media
+venv/
+.DS_Store
