@@ -29,10 +29,7 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "mysite-env.us-east-2.elasticbeanstalk.com",
-]
+ALLOWED_HOSTS = [ "localhost", "mysite-env.us-east-2.elasticbeanstalk.com" ]
 
 
 # Application definition
