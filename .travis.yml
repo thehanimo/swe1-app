@@ -24,8 +24,8 @@ after_success: coveralls
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id: $AWSACCESSID
-  secret_access_key: $AWSACCESSKEY
+  access_key_id: "$AWS_ACCESS_ID"
+  secret_access_key: "$AWS_SECRET_KEY"
   region: "us-east-2"
   app: "mysite"
   env: "mysite-env"
